@@ -6,7 +6,6 @@ create TABLE users(
   name VARCHAR(255),
   surname VARCHAR(255),
   password VARCHAR(255),
-  birthday DATE,
   city VARCHAR(255),
   school VARCHAR(255),
   timezone VARCHAR(255),
@@ -19,6 +18,7 @@ create TABLE users(
   is_new_applicant_answer_notifiable BOOLEAN,
   is__error_report_processing_notifiable BOOLEAN
 )
+
 
 create TABLE roles(
   id SERIAL PRIMARY KEY,
