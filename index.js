@@ -12,13 +12,13 @@ db.authenticate()
   });
 
 const app = express();
-app.use("/", require("./routes/routes"));
 
-app.use(bodyParser.json({ limit: "50mb" }));
-app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors("*"));
 
 const PORT = process.env.PORT || 3000;
 db.sync().then(() => {
   app.listen(PORT, console.log(`Server started on port ${PORT}`));
 });
+app.use("/", require("./routes/routes"));
