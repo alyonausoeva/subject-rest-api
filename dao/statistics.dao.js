@@ -1,11 +1,10 @@
-const Statistics = require("../models/User");
+const Statistics = require("../models/Statistics");
 
 var StatisticsDao = {
   findAll: findAll,
   findById: findById,
   deleteById: deleteById,
   create: create,
-  update: update,
 };
 
 function findAll() {

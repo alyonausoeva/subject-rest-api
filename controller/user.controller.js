@@ -55,7 +55,7 @@ function deleteUser(req, res) {
 function updateUser(req, res) {
   userDao
     .update(req.body, req.params.id)
-    .then((data) => {
+    .then(() => {
       res.status(200).json({
         message: "User updated successfully",
       });
